@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "66449765762",
+    "firebase_url": "https://rent-b2bfe.firebaseio.com",
+    "project_id": "rent-b2bfe",
+    "storage_bucket": "rent-b2bfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66449765762:android:f07c3f317a4064204f0b9b",
+        "android_client_info": {
+          "package_name": "com.example.rent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66449765762-3n9j5vjfbqddmvsrl5o45tong5lhg9ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpbXhokGdB-wbjJgpVs-ldiWY-tPHZEVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66449765762-3n9j5vjfbqddmvsrl5o45tong5lhg9ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
