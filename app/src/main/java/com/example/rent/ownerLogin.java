@@ -32,6 +32,8 @@ public class ownerLogin extends AppCompatActivity {
         ownerPassword = findViewById(R.id.editText2);
         ownerLoginBtn = findViewById(R.id.LoginBtn);
 
+        auth = FirebaseAuth.getInstance();
+
         ownerLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
