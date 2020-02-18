@@ -26,7 +26,7 @@ public class OwnerLanding extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_landing);
 
-        db= FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance();
 
         companyName = findViewById(R.id.company_name_owner);
         ownerName = findViewById(R.id.owner_name);
@@ -42,25 +42,29 @@ public class OwnerLanding extends AppCompatActivity {
                 String propertyAddress = address.getText().toString().trim();
                 String tenants = tenancy.getText().toString().trim();
 
-                Map<String, Object> data = new HashMap<>();
-                data.put("CompanyName",company);
-                data.put("ownerName",owner);
-                data.put("Address", propertyAddress);
-                data.put("TotalTenants", tenants);
+                uploadData(company,owner,propertyAddress,tenants);
+             }
+        });
+    }
 
-                db.collection("Info").document("Company")
-                        .set(data)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(getApplicationContext(), "Successfull..", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
+    public void uploadData(String company, String owner, String propertyAddress,String tenants){
+        Map<String, Object> data = new HashMap<>();
+        data.put("CompanyName",company);
+        data.put("ownerName",owner);
+        data.put("Address", propertyAddress);
+        data.put("TotalTenants", tenants);
+
+        db.collection("Companies").document("Company")
+                .set(data)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Failed" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(getApplicationContext(), "Successfull..", Toast.LENGTH_SHORT).show();
                     }
-                });
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), "Failed" + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
