@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OwnerLanding"></activity>
+        <activity android:name=".ViewRegisteredProperty"></activity>
+        <activity android:name=".OwnerLanding" />
         <activity android:name=".OwnerRegisterProperty" />
         <activity android:name=".TenantLanding" />
         <activity android:name=".TenantLogin" />
