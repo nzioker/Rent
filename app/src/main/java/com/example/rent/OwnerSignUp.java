@@ -21,7 +21,7 @@ public class OwnerSignUp extends AppCompatActivity {
     private EditText ownerName;
     private EditText ownerEmail;
     private EditText ownerPassword;
-    private Button ownerSignUp;
+    private Button ownerSignUp, loginSignup;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,18 @@ public class OwnerSignUp extends AppCompatActivity {
         ownerEmail = findViewById(R.id.editText3);
         ownerPassword = findViewById(R.id.OwnerPassword);
         ownerSignUp = findViewById(R.id.signUp);
-
+        loginSignup = findViewById(R.id.loginsignUp);
         //get firebaseAuth instance
 
         auth = FirebaseAuth.getInstance();
+
+        loginSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OwnerSignUp.this, ownerLogin.class));
+                finish();
+            }
+        });
 
         ownerSignUp.setOnClickListener(new View.OnClickListener() {
             @Override

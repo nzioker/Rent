@@ -58,10 +58,22 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Button"
+        android:text="SignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OwnerPassword" />
+
+    <Button
+        android:id="@+id/loginsignUp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:text="Go to Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OwnerPassword" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
