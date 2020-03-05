@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Rent</string>
+    <string name="register_property">Register Property</string>
+    <string name="view_property">View Registered Property</string>
+    <string name="login_page">Log In!</string>
+    <string name="login_btn">Login</string>
+    <string name="email_owner_hint">Email</string>
+    <string name="email_owner"></string>
+    <string name="password_owner_hint">Password</string>
+    <string name="password_owner"></string>
+    <string name="register_property_page">Register Your Property</string>
 </resources>

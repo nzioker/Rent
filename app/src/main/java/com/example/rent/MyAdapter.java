@@ -24,14 +24,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public MyAdapter(ViewRegisteredProperty viewProperty, List<ModelOwnerPropertyList> modelList) {
         this.viewProperty = viewProperty;
-        this.modelList = modelList = new ArrayList<>();//No error, but it doesnt display the list. Blankpage
+        this.modelList =  new ArrayList<>(modelList);
 
         db = FirebaseFirestore.getInstance();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView AddressV, CompanyNameV, TotalTenantsV, ownerNameV;
+        public TextView AddressV, CompanyNameV, TotalTenantsV, ownerNameV;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -58,7 +58,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             holder.AddressV.setText(modelList.get(position).getAddress());
             holder.CompanyNameV.setText(modelList.get(position).getCompanyName());
             holder.TotalTenantsV.setText(modelList.get(position).getTotalTenants());
-            holder.ownerNameV.setText(modelList.get(position).getOwnerName());
+            //holder.ownerNameV.setText(modelList.get(position).getOwnerName());
     }
 
     @Override

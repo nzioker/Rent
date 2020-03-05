@@ -39,7 +39,7 @@ public class ModelOwnerPropertyList {
     }
 
     public String getOwnerName() {
-        return ownerName;
+        return this.ownerName;
     }
 
     public void setOwnerName(String ownerName) {
